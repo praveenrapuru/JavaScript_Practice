@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo list</title>
+	<script type="text/javascript">
+		function addTask(){
+			var taskInput= document.getElementById('taskInput');
+			var taskList = document.getElementById('taskList');
+
+			if (taskInput.value == "") {
+				alert("Blank value not allowed");
+				return;
+			}
+			
+			const li = document.createElement('li');
+			li.textContent = taskInput.value;
+			taskList.append(li);
+			taskInput.value = '';
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<input type="text" id = "taskInput">
+		<button onclick="addTask()">Add Task</button>
+		<ol id="taskList"></ol>
+	</div>
+</body>
+</html>
