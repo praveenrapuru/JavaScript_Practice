@@ -2,22 +2,28 @@
 <html>
 <head>
 	<title>Todo list</title>
-	<script type="text/javascript">
-		function addTask(){
-			var taskInput= document.getElementById('taskInput');
-			var taskList = document.getElementById('taskList');
-
-			if (taskInput.value == "") {
-				alert("Blank value not allowed");
-				return;
-			}
-			
-			const li = document.createElement('li');
-			li.textContent = taskInput.value;
-			taskList.append(li);
-			taskInput.value = '';
+	<script type="text/javascript" src="./TodoList_script.js"></script>
+	<style type="text/css">
+		button{
+			background-color:black;
+			color: white;
+			font-size: 16px;
 		}
-	</script>
+		input{
+			border: 1px solid #ccc;
+  			border-radius: 4px;
+  			box-sizing: border-box;
+  			width: 180px;
+  			height: 30px;
+		}
+		ol{
+			font-size: 20px;
+		}
+		li.strikethrough {
+            text-decoration: line-through;
+        }
+		
+	</style>
 </head>
 <body>
 	<div>
